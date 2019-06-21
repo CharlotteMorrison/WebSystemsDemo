@@ -1,0 +1,30 @@
+﻿body {
+    background-color: #D9D9D9;
+    background-image: url("../images/gym.jpg");
+    background-size: cover;
+}
+
+.jumbo {
+    color: #FFFFFF;
+    background-color: #00246B;
+}
+
+.unfnav {
+    color: white;
+}
+
+.bluebtn {
+    background-color: #00246B;
+    border-color: #00246B;
+    color: #FFFFFF;
+}
+
+.whitebtn {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #00246B;
+}
+
+.plans {
+    background-color: rgba(255,255,255,.5);
+}
