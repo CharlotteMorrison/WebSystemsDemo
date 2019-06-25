@@ -26,5 +26,30 @@ namespace OspreyOlympiansGold.Models
         [Required]
         [StringLength(50)]
         public string Password { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Email { get; set; }
+
+        [Column("Street Address")]
+        [Required]
+        [StringLength(100)]
+        public string Street_Address { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string City { get; set; }
+
+        [Required]
+        [StringLength(2)]
+        public string State { get; set; }
+
+        [Required]
+        [StringLength(5)]
+        public string Zip { get; set; }
+
+        [Required]
+        [StringLength(15)]
+        public string Phone { get; set; }
     }
 }

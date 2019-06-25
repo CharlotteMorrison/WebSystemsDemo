@@ -12,7 +12,7 @@ namespace OspreyOlympiansGold.Controllers
 {
     public class UsersController : Controller
     {
-        private Login db = new Login();
+        private Customers db = new Customers();
 
         // GET: Users
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace OspreyOlympiansGold.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,UserName,Password")] User user)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace OspreyOlympiansGold.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,UserName,Password")] User user)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone")] User user)
         {
             if (ModelState.IsValid)
             {

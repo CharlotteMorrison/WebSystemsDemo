@@ -5,10 +5,10 @@ namespace OspreyOlympiansGold.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Login : DbContext
+    public partial class Customers : DbContext
     {
-        public Login()
-            : base("name=Login")
+        public Customers()
+            : base("name=Customers")
         {
         }
 
@@ -31,6 +31,26 @@ namespace OspreyOlympiansGold.Models
             modelBuilder.Entity<User>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Street_Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.City)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.State)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.Zip)
+                .IsFixedLength();
         }
     }
 }
