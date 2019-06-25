@@ -21,7 +21,7 @@ namespace OspreyOlympiansGold.Controllers
         }
 
         // GET: Users/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult CheckoutDetails(int? id)
         {
             if (id == null)
             {
@@ -36,7 +36,7 @@ namespace OspreyOlympiansGold.Controllers
         }
 
         // GET: Users/Create
-        public ActionResult Create()
+        public ActionResult CreateAccount()
         {
             return View();
         }
@@ -46,13 +46,13 @@ namespace OspreyOlympiansGold.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone")] User user)
+        public ActionResult CreateAccount([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone")] User user)
         {
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CheckoutDetails", new { id = user.Id });
             }
 
             return View(user);

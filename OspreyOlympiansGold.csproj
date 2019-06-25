@@ -134,6 +134,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906252109372_InitialCreate.cs" />
+    <Compile Include="Migrations\201906252109372_InitialCreate.Designer.cs">
+      <DependentUpon>201906252109372_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,8 +190,14 @@
     <Content Include="Views\Plan\Plan1.cshtml" />
     <Content Include="Views\Plan\Plan2.cshtml" />
     <Content Include="Views\Plan\Plan3.cshtml" />
+    <Content Include="Views\Users\CreateAccount.cshtml" />
+    <Content Include="Views\Users\CheckoutDetails.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906252109372_InitialCreate.resx">
+      <DependentUpon>201906252109372_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
