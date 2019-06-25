@@ -23,6 +23,7 @@ namespace OspreyOlympiansGold.Controllers
         // GET: Users/Details/5
         public ActionResult CheckoutDetails(int? id)
         {
+            id = 1; //for testing, remove after
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

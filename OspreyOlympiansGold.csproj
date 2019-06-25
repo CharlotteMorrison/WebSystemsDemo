@@ -157,6 +157,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\bball.jpg" />
     <Content Include="images\gym.jpg" />
     <Content Include="images\Osprey-Head_FC.jpg" />
     <Content Include="images\unflogo.png" />
