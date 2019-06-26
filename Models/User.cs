@@ -51,5 +51,8 @@ namespace OspreyOlympiansGold.Models
         [Required]
         [StringLength(15)]
         public string Phone { get; set; }
+
+        [Required]
+        public int Plan { get; set; }
     }
 }

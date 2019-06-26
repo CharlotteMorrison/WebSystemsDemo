@@ -122,7 +122,22 @@
                                     </div>
                                 </td>
                             </tr>
-
+                            <tr>
+                                <td colspan="4">
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <!--just make a radial button-->
+                                           
+                                            @Html.DropDownListFor(model => model.Plan, new List<SelectListItem>
+                                                {
+                                                    new SelectListItem{ Text="Swoop Plan", Value = "1" },
+                                                    new SelectListItem{ Text="Osprey Plan", Value = "2" },
+                                                    new SelectListItem{ Text="Olympian Plan", Value = "3" },
+                                                 })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                             <tr style="padding-top:20px">
                                 <td colspan="2" style="padding-top:50px">
                                     <div class="form-group">

@@ -52,8 +52,29 @@
             <hr />
             <h4>Your Plan</h4>
             <hr />
-            <!--insert partial view of plan here-->
-        </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color:#00246B;color:white;font-weight:400">
+                        <th scope="col">@ViewBag.Plan</th>
+                        <th colspan="2">Price: @ViewBag.Cost</th>
+
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+                            <ul>
+                                @foreach (var item in ViewBag.Features)
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </th>
+  
+                    </tr>
+                </thead>
+            </table>
+
+</div>
         <p>
             <a class="btn btn-default bluebtn" href="@Html.ActionLink("Edit", "Edit", new { id = Model.Id })"></a>
             <a class="btn btn-default bluebtn" href="@Url.Action("Index","Home")">Back to Home</a>            

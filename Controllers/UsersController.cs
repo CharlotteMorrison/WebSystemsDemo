@@ -33,6 +33,33 @@ namespace OspreyOlympiansGold.Controllers
             {
                 return HttpNotFound();
             }
+            List<String> features = new List<String>();
+            if (user.Plan == 1)
+            {
+                ViewBag.Plan = "Plan 1";
+                features.Add("Access to basic gym equipment and indoor track");
+                features.Add("3x use of spa services such as tanning bed and sauna");
+                features.Add("1 free session with a personal trainer");
+                ViewBag.Cost = " $12/month *12 month contract";
+            }
+            else if(user.Plan == 2){
+                ViewBag.Plan = "Plan 2";
+                features.Add("Access to basic gym equipment and indoor track");
+                features.Add("3x use of spa services such as tanning bed and sauna");
+                features.Add("1 free session with a personal trainer");
+                features.Add("Month-to-month, no commitment payment");
+                ViewBag.Cost = " $15/month *NO contract";
+            }
+            else
+            {
+                ViewBag.Plan = "Plan 3";
+                features.Add("Access to basic gym equipment and indoor track");
+                features.Add("Access to tennis court and basketball court");
+                features.Add("Unlimited use of spa services such as tanning bed and sauna");
+                features.Add("5 free sessions with a personal trainer");
+                ViewBag.Cost = " $18/month *Unlimited Access";
+            }
+            ViewBag.Features = features;
             return View(user);
         }
 
@@ -47,7 +74,7 @@ namespace OspreyOlympiansGold.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateAccount([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone")] User user)
+        public ActionResult CreateAccount([Bind(Include = "Id,FirstName,LastName,UserName,Password,Email,Street_Address,City,State,Zip,Phone,Plan")] User user)
         {
             if (ModelState.IsValid)
             {

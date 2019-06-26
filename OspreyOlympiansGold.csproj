@@ -196,6 +196,7 @@
     <Content Include="Views\Plan\Plan3.cshtml" />
     <Content Include="Views\Users\CreateAccount.cshtml" />
     <Content Include="Views\Users\CheckoutDetails.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906252109372_InitialCreate.resx">
