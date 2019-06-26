@@ -1,8 +1,39 @@
-﻿
-@{
-    ViewBag.Title = "Plan1";
+﻿@{ 
+    ViewBag.Title = "Swoop Plan";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Plan1</h2>
+<h2 class="unfnav" style="font-size:40px">Swoop Plan</h2>
+<hr/>
 
+<div class="row unfnav">
+    <div class="col-md-8" style="background-color:rgba(179,179,179,.5);">
+        <p style="font-size:35px">
+            Our base package offers you standard access to gym equipment and minor perks for a commitment of 12 months.<br />
+            <br/>
+            Includes:
+            <ul style="font-size:25px">
+                <li>access to basic gym equipment and indoor track</li>
+                <li>3x use of spa services such as tanning bed and sauna</li>
+                <li>1 free session with a personal trainer</li>
+            </ul>
+            <br/>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="~/images/ospreySwoop.jpg" style="max-width:100%"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 bluebtn">
+        <p style="font-size:300%">
+            $12/month
+        </p>
+        <p style="font-size:24px">
+            12 month commitment
+        </p>
+        <p>
+            <a class="btn btn-default whitebtn" href="../Plans/Plan1.cshtml">Purchase &raquo;</a>
+        </p>
+    </div>
+</div>

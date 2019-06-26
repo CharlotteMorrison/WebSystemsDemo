@@ -159,7 +159,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\bball.jpg" />
     <Content Include="images\gym.jpg" />
+    <Content Include="images\olympian.jpg" />
     <Content Include="images\Osprey-Head_FC.jpg" />
+    <Content Include="images\ospreySoar.jpg" />
+    <Content Include="images\ospreySwoop.jpg" />
     <Content Include="images\unflogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
